@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarSupportContent">
+      <ul class="navbar-nav nav-tabs">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            routerLink="/landing/dash"
+            >My Project</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/landing/home">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            id="navbardown"
+            class="nav-link dropdown-toggle"
+            data-bs-toggle="dropdown"
+            routerLink="/landing/users"
+            role="button"
+            aria-expanded="false"
+            >Users</a
+          >
+          <ul class="dropdown-menu" aria-labelledby="navbardown">
+            <li><a class="dropdown-item">Create User</a></li>
+            <li><a class="dropdown-item">List All Users</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item">Suspended Users</a></li>
+          </ul>
+        </li>
+        <!-- <li class="nav-item">
+        <a class="nav-link">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link ">Disabled</a>
+      </li> -->
+      </ul>
+    </div>
+  </div>
+  <div class="mx-3">
+    <button class="btn btn-outline" (click)="onLogin()">Login</button>
+  </div>
+  <div class="mx-3">
+    <button class="btn btn-outline" (click)="onRegister()">Register</button>
+  </div>
+</nav>
+<div class="container-fluid">
+  <router-outlet></router-outlet>
+</div>

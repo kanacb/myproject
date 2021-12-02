@@ -1,0 +1,50 @@
+<div class="row">
+  <div class="col col-10">
+    <div class="display-5">Login</div>
+  </div>
+  <div class="col col-2">
+    <button mat-button class="btn btn-outline" (click)="onClose()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+</div>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <div class="mb-3">
+    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input
+        type="email"
+        class="form-control"
+        id="staticEmail"
+        formControlName="email"
+        placeholder="Enter Your Email ..."
+      />
+    </div>
+    <span class="" *ngIf="getEmailValid(loginForm)"><small style="color: red;"># required</small></span>
+  </div>
+  <div class="mb-3 row">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+    <div class="col-sm-10">
+      <input
+        type="password"
+        class="form-control"
+        id="inputPassword"
+        formControlName="password"
+        type="password"
+        max="10"
+        placeholder="5 char long password"
+      />
+      <span class="" *ngIf="getPasswordValid(loginForm)"><small style="color: red;"># required</small></span>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center">
+    <button class="btn btn-primary btn-sm" type="submit">Login</button>
+    <button
+      class="btn btn-outline-warning mx-5"
+      type="button"
+      (click)="onClose()"
+    >
+      Cancel
+    </button>
+  </div>
+</form>

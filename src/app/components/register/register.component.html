@@ -1,0 +1,35 @@
+  <div class="row">
+    <div class="col col-10"><div class="display-5">Register</div></div>
+    <div class="col col-2">
+      <button mat-button class="btn btn-outline btn-sm" (click)="onClose()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="mb-3 row">
+      <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input
+          type="text"
+          readonly
+          class="form-control-plaintext"
+          id="staticEmail"
+          value="email@example.com"
+        />
+      </div>
+    </div>
+    <div class="mb-3 row">
+      <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+      <div class="col-sm-10">
+        <input type="password" class="form-control" id="inputPassword" />
+      </div>
+      <span class="" *ngIf="getPasswordValid(registerForm)"><small style="color: red;"># required</small></span>
+    </div>
+    <div class="d-flex justify-content-center">
+      <button mat-button class="btn btn-primary btn-sm" type="submit">Register</button>
+      <button mat-button class="btn btn-outline-warning btn-sm mx-5" type="button" (click)="onClose()">Cancel</button>
+    </div>
+  </div>
+
+
